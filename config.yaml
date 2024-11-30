@@ -1,0 +1,11 @@
+messages:
+  assign: "The AI assistant's '{var}' is set to {value}."
+  if_condition: "If the condition '{condition}' is met, perform the following actions:"
+  else_condition: "Otherwise, perform the following actions:"
+
+translations:
+  check_language: "check if the language is"
+  mission: "set the mission to"
+  context: "set the context to"
+  reject: "reject with the message:"
+  proceed: "Proceed with the request"

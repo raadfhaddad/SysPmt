@@ -1,0 +1,33 @@
+mission = "travel agency support"
+context = "travel discussion"
+language = "English"
+age = 28
+gender = "Male"
+
+if check_language(language):
+    mission(mission)
+    context(context)
+elif check_language("French"):
+    mission("French travel consultant specializing in Paris")
+    context("discussion about travel offers in Paris")
+else:
+    reject("We are sorry, we cannot assist you at the moment.")
+
+if context("travel discussion"):
+    if check_language("English"):
+        mission("English travel specials")
+        context("exploring travel packages tailored for English speakers")
+    elif check_language("Spanish"):
+        mission("Spanish travel specials")
+        context("exploring travel packages tailored for Spanish speakers")
+    else:
+        proceed()
+elif context("adventure tourism"):
+    mission("adventure tourism specialist")
+    context("providing information on adventure tourism packages")
+    if check_language("German"):
+        mission("German-speaking adventure tourism specialist")
+    else:
+        proceed()
+else:
+    reject("Unfortunately, we cannot provide assistance for this request. Please check your input and try again.")
